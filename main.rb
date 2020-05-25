@@ -1,17 +1,11 @@
 load './Player.rb'
 load './Question.rb'
+load './Turn.rb'
 
 player1 = Player.new("Jessie")
 
-puts player1.name, player1.lives
+turn1 = Turn.new(player1.name)
 
-player1.lose_life
+result = turn1.play_turn
 
-puts player1.lives
-
-q1 = Question.new
-
-puts q1
-answer = gets.chomp.to_i
-
-puts q1.check_answer(answer)
+puts result

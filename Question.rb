@@ -17,13 +17,12 @@ class Question
         @answer = @num1 * @num2
     end
   end
-
   def to_s
     "What does #{@num1} #{@operator_text} #{@num2} equal?"
   end
 
   def check_answer(answer)
-    answer == @answer
+    answer.to_i == @answer
   end
   
 end
