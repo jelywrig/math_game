@@ -7,6 +7,7 @@ class Turn
   end
   
   def play_turn
+    puts "#{@player_name}'s turn"
     puts @question
     answer = gets.chomp
     correct = @question.check_answer(answer)
@@ -17,5 +18,5 @@ class Turn
     end
     correct
   end
-  
+
 end

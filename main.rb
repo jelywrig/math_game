@@ -1,11 +1,11 @@
 load './Player.rb'
 load './Question.rb'
 load './Turn.rb'
+load './Game.rb'
 
 player1 = Player.new("Jessie")
+player2= Player.new("Bob")
+player3= Player.new("Three")
 
-turn1 = Turn.new(player1.name)
-
-result = turn1.play_turn
-
-puts result
+game = Game.new([player1, player2, player3])
+game.play

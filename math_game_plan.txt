@@ -11,10 +11,10 @@ lose life
 Game
 - players array
 -curr player
-- won (bool)
+- winner
 
 behavior
-initialize with players, won = false
+initialize with players, winner = nil
 play game  - main loop while not won
   calls turn with curr player
   receives result
@@ -36,7 +36,7 @@ Turn
 
 behavior
 initilize gets new question, stores player name
-- play turn - prints question (puts self.question.to_s), chomps answer, checks Answer (question.checkAnser()), returns result (bool from check answer)
+- play turn - prints question (puts self.question.to_s), chomps answer, checks Answer (question.checkAnser()), print result text, returns result (bool from check answer)
 
 Question
 - num1
@@ -48,4 +48,4 @@ Behavior
 - initialize takes no args,  randomly selects, num 1, num 2, operator
 - calculates and sets answer
 -question to string
-- check answer (prints Yes correct, or No) returns true or false
+- check answer returns true or false  - 
